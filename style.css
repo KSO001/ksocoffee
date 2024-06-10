@@ -1,0 +1,564 @@
+@charset "UTF-8";
+
+    
+
+ @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Open+Sans&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+
+* {
+    
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    
+}
+
+
+:root {
+    
+    
+    /* Cores do Projeto*/
+    
+   --color-body: #1f1516;
+   --color-header: #1b1414;
+   --color-nav: #1b1414;
+   --color-input: #2c2121;
+   --color-nav-text: #3d2e2e;
+   --color-first-section: #161010;
+   --color-second-section: #1b1414;
+   --color-footer: #1f1516; 
+   --color-overlay: #965044; /*sobreposição*/
+   --color-title-small: #403133;
+   --color-title-big: #FFFFFFFF;
+   --color-four-divs: #201719;
+   --color-first-title-divs: #aa9339;
+   --color-second-title-divs: #573a3e;                  
+   --font-title-big: 'Montserrat', sans-serif;
+   --font-title-small: 'Open Sans', sans-serif;
+   --font-logo: 'Bebas Neue', sans-serif;
+   
+   
+   
+    /* Palheta Adicional 
+    
+    Título e parágrafo - EDE0D4 ou branco
+    
+    header - 9C6644
+    
+    primeira seção - 7F5539
+    
+    segunda seção - 8A5A44
+    
+    sobreposição - D69F7E
+    
+    4 divs - 9D6B53   
+       
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    
+    
+    */    
+        
+    
+   }
+
+
+
+ #home {
+    
+    background-color: var(--color-header);
+}
+
+
+#open, #close {
+    
+    display: none;
+  
+}
+
+
+.max-width {
+    
+    max-width: 1024px;
+    margin: auto;
+    
+}
+
+
+.search {
+    
+    display: none;
+    
+}
+
+
+#menu {
+    
+   max-width: 1024px;
+   margin: 0 auto;
+   
+    
+}
+
+
+nav {
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0px 40px 0px;
+    
+    
+    
+}
+
+
+
+
+nav h1 {
+    
+    color: white;
+    font-family: var(--font-logo);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+
+
+
+
+nav ul {
+    
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;    
+    justify-content: center;
+    align-items: center;
+           
+    
+}
+
+
+nav ul li a {
+    
+    text-decoration: none;
+    display: block;
+    color: var(--color-nav-text);
+    padding: 20px;
+    cursor: pointer;
+        
+}
+
+
+nav ul li a:hover {
+    
+    color: white;
+    transition: 0.7ms ease-in-out;
+    
+    }
+    
+
+nav #git {
+    
+    color: white;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+    font-size: 2em;
+    font-family: var(--font-title-big);
+    
+}
+
+
+
+.first-section {
+    
+    background-color: var(--color-first-section);
+    height: 30vh; 
+    
+  
+}
+
+
+.container-first-section {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    text-align: left;
+    width: 100%;
+    height: 100%;    
+    overflow: hidden;
+    
+
+}
+
+
+
+.content-first-section {
+    
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+}
+
+
+
+span {
+    
+    font-size: 0.7em;
+    color: var(--color-title-small);
+    font-family: var(--font-title-small);
+    text-transform: uppercase;
+    
+}
+
+
+h2 {
+    
+    font-size: 3.3em;
+    color: var(--color-title-big);
+    font-family: var(--font-title-big);    
+    text-transform: capitalize;
+}
+
+
+h3 {
+    
+    font-size: 2.8em;
+    color: var(--color-title-big);
+    font-family: var(--font-title-big);
+    width: 50%;
+    text-transform: capitalize;
+    
+}
+
+
+h4 {
+    
+    font-size: 1.3em;
+    color: white;
+    
+    
+}
+
+
+h5 {
+    
+    font-size: 1em;
+    font-family: var(--font-title-small);
+    color: #5a4444d8;
+}
+
+
+p {
+    
+    font-size: 2 1em;
+    color: #ffffffd6;
+    font-family: var(--font-title-small);
+    
+    
+}
+
+
+hr {
+    
+    background-color: var(--color-overlay);
+    width: 42%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+
+
+.grid-container {
+    
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(4, auto);  
+    grid-template-rows: repeat(4, auto);       
+    gap: 10px;    
+    
+    
+        
+}
+
+
+
+.grid-container figure:nth-child(4n+1) {
+    /* Estilos para os elementos da primeira coluna    
+     */
+     
+     transform: translateY(0px);
+     
+}
+
+
+.grid-container figure:nth-child(4n+2) {
+    /* Estilos para os elementos da primeira coluna    
+     */
+     
+     transform: translateY(-60px);
+     
+}
+
+
+.grid-container figure:nth-child(4n+3) {
+    /* Estilos para os elementos da primeira coluna    
+     */
+     
+     transform: translateY(0px);
+     
+}
+
+
+
+.grid-container figure:nth-child(4n+4) {
+    /* Estilos para os elementos da primeira coluna    
+     */
+     
+     transform: translateY(-30px);
+     
+}
+
+
+
+.grid-container figure {
+    
+    background-color: white;
+    padding: 0px;    
+    border-radius: 10px;    
+    width: 120px;
+    height: 100%;
+    
+    }
+
+    
+    .grid-container figure img {
+    width: 100%; /* Ou qualquer porcentagem desejada */
+    height: 100%; /* Para manter a proporção */
+    object-fit: cover; /* Para manter a proporção e preencher o espaço */
+    border-radius: 10px; 
+}
+
+
+
+
+
+
+
+.overlay {
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;    
+    width: 100%;
+    height: 50px;
+    transform: translateY(-25px);
+    
+    
+}
+
+
+.first-section .overlay > button {
+    
+    background-color: var(--color-overlay);
+    width: 50px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    
+}
+
+
+
+.material-symbols-outlined {
+  
+  
+  color: white;
+
+    
+}
+
+
+
+
+.second-section {
+    
+    padding-top: 80px;
+    background-color: var(--color-second-section);
+    height: 47vh;
+         
+    
+    
+}
+
+
+.content-second-section {
+    
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+}
+
+
+
+.reviews {
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 50px;
+ 
+    
+    
+}
+
+
+.reviews .review {
+    
+    background-color: var(--color-four-divs);
+    padding: 20px;
+    flex: 1 40%;
+    border-radius: 10px;    
+    
+       
+}
+
+
+.reviews .review article p {
+    
+    padding-top: 20px;
+    padding-bottom: 20px;
+    
+}
+
+
+
+.reviews .review article header {
+    
+    padding: 0px;
+    background-color: var(--color-four-divs);
+    
+}
+
+    
+
+.reviews .review article header #yellow {
+    
+    color: var(--color-first-title-divs);
+    
+}
+    
+    
+ .reviews .review article figure {
+       
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  
+         
+ }
+ 
+ 
+ figcaption {
+     
+     color: white;
+     
+ }
+    
+    
+.reviews .review article figure img {
+    
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    margin-right: 10px;
+    
+    
+}
+
+
+.flex-into {
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    padding-top: 5px;
+}
+
+
+
+.botao-carregar-receitas {
+    
+    margin: auto;
+    display: block;
+    margin-top: 60px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.7em;
+    
+    
+}
+
+
+footer {
+    
+    background-color: var(--color-footer);
+    text-align: center;
+    margin: 0 auto;
+    color: white;
+    text-transform: capitalize;
+    width: 100%;
+    height: 15vh;
+}
+
+.copy {
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;    
+    
+}
+
+.copy p {
+    
+    padding-top: 0px;
+    font-size: 0.8em;
+    font-weight: bolder;
+}
+
+
+.copy p:nth-of-type(2) {/* Quando o filho é a mesma tag */
+      
+    font-size: 0.5em;
+}
+
+
+
+
+
+
+
